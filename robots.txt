@@ -1,0 +1,8 @@
+# robots.txt para www.paulofagoto.com.br
+# Permite que todos os buscadores rastreiem todo o site.
+
+User-agent: *
+Allow: /
+
+# Diretiva que aponta para o sitemap (deve começar com "S" maiúsculo e URL absoluta)
+Sitemap: https://www.paulofagoto.com.br/sitemap.xml
