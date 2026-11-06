@@ -73,6 +73,33 @@
       "telephone": "+5519971540808",
       "email": "phfagoto@gmail.com"
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Carlos A." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Excelente atendimento! O Paulo veio até minha casa em Valinhos para formatar o computador. Ficou super rápido e ele salvou todos os meus arquivos antes."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Mariana S." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Resolveu meu problema remotamente em menos de uma hora. Muito atencioso e explicou tudo que estava fazendo. Recomendo!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Roberto M." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Contratei para configurar as impressoras fiscais da minha empresa em Valinhos. Serviço impecável e pontual."
+      }
+    ],
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -314,7 +341,7 @@
       margin: 0 auto;
     }
 
-    .services-title {
+    .services-title, .faq-title, .testimonials-title {
       text-align: center;
       font-size: 1.7rem;
       font-weight: 700;
@@ -323,7 +350,7 @@
       letter-spacing: -0.3px;
     }
 
-    .services-title::after {
+    .services-title::after, .faq-title::after, .testimonials-title::after {
       content: "";
       display: block;
       width: 48px;
@@ -333,7 +360,7 @@
       margin: 14px auto 0;
     }
 
-    .services-subtitle {
+    .services-subtitle, .faq-subtitle, .testimonials-subtitle {
       text-align: center;
       color: #6c757d;
       font-size: 0.95rem;
@@ -506,6 +533,81 @@
       transform: translateY(0);
     }
 
+    /* ===== SEÇÃO DE DEPOIMENTOS ===== */
+    .testimonials-section {
+      width: 100%;
+      padding: 20px 20px 40px;
+    }
+
+    .testimonials-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .testimonial-stars {
+      color: #f5b301;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: #495057;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid #f1f3f5;
+      padding-top: 16px;
+    }
+
+    .author-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: #1a1a2e;
+      font-size: 0.95rem;
+    }
+
+    .author-location {
+      font-size: 0.8rem;
+      color: #868e96;
+    }
+
     /* ===== SEÇÃO FAQ ===== */
     .faq-section {
       width: 100%;
@@ -515,33 +617,6 @@
     .faq-inner {
       max-width: 900px;
       margin: 0 auto;
-    }
-
-    .faq-title {
-      text-align: center;
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 8px;
-      letter-spacing: -0.3px;
-    }
-
-    .faq-title::after {
-      content: "";
-      display: block;
-      width: 48px;
-      height: 3px;
-      background-color: #168A42;
-      border-radius: 2px;
-      margin: 14px auto 0;
-    }
-
-    .faq-subtitle {
-      text-align: center;
-      color: #6c757d;
-      font-size: 0.95rem;
-      margin: 14px 0 36px;
-      line-height: 1.5;
     }
 
     .faq-list {
@@ -639,15 +714,9 @@
     }
 
     @keyframes pulse-whatsapp {
-      0% {
-        box-shadow: 0 0 0 0 rgba(22, 138, 66, 0.5);
-      }
-      70% {
-        box-shadow: 0 0 0 16px rgba(22, 138, 66, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(22, 138, 66, 0);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(22, 138, 66, 0.5); }
+      70% { box-shadow: 0 0 0 16px rgba(22, 138, 66, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(22, 138, 66, 0); }
     }
 
     /* ===== RODAPÉ TRADICIONAL EQUILIBRADO ===== */
@@ -862,13 +931,13 @@
         padding: 14px 28px;
         width: 100%;
       }
-      .services {
+      .services, .visit-section, .testimonials-section {
         padding: 12px 16px 32px;
       }
-      .services-title {
+      .services-title, .faq-title, .testimonials-title {
         font-size: 1.4rem;
       }
-      .services-subtitle {
+      .services-subtitle, .faq-subtitle, .testimonials-subtitle {
         font-size: 0.88rem;
         margin-bottom: 28px;
       }
@@ -878,18 +947,8 @@
       .service-card h3 {
         font-size: 0.93rem;
       }
-      .visit-section {
-        padding: 12px 16px 32px;
-      }
       .faq-section {
         padding: 12px 16px 48px;
-      }
-      .faq-title {
-        font-size: 1.4rem;
-      }
-      .faq-subtitle {
-        font-size: 0.88rem;
-        margin-bottom: 28px;
       }
       .faq-item summary {
         padding: 16px 18px;
@@ -904,6 +963,9 @@
         height: 56px;
         bottom: 20px;
         right: 20px;
+      }
+      .testimonial-card {
+        padding: 22px 20px;
       }
     }
   </style>
@@ -1007,6 +1069,55 @@
     </div>
   </section>
 
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="testimonials-section" aria-labelledby="testimonials-title">
+    <div class="testimonials-inner">
+      <h2 id="testimonials-title" class="testimonials-title">O que dizem os clientes</h2>
+      <p class="testimonials-subtitle">A confiança de quem já contratou meus serviços</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+            <p class="testimonial-text">"Excelente atendimento! O Paulo veio até minha casa em Valinhos para formatar o computador. Ficou super rápido e ele salvou todos os meus arquivos antes."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <span class="author-name">Carlos A.</span>
+              <span class="author-location">Valinhos/SP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+            <p class="testimonial-text">"Resolveu meu problema remotamente em menos de uma hora. Muito atencioso e explicou tudo que estava fazendo. Recomendo!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <span class="author-name">Mariana S.</span>
+              <span class="author-location">Campinas/SP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+            <p class="testimonial-text">"Contratei para configurar as impressoras fiscais da minha empresa em Valinhos. Serviço impecável e pontual."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <span class="author-name">Roberto M.</span>
+              <span class="author-location">Valinhos/SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== PERGUNTAS FREQUENTES ===== -->
   <section class="faq-section" aria-labelledby="faq-title">
     <div class="faq-inner">
@@ -1081,7 +1192,6 @@
   <footer class="site-footer">
 
     <div class="footer-main">
-
       <div class="footer-col">
         <p class="footer-brand-name">Paulo Fagoto</p>
         <p class="footer-brand-desc">Técnico em Informática com atendimento em Valinhos/SP. Formatação de computadores, suporte remoto e visita técnica com profissionalismo e atenção aos detalhes.</p>
