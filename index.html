@@ -330,18 +330,18 @@
       transform: translateY(0);
     }
 
-    /* ===== SEÇÃO DE SERVIÇOS REMOTOS ===== */
-    .services {
+    /* ===== ESTILOS GERAIS DE SEÇÕES ===== */
+    .services, .visit-section, .testimonials-section, .how-it-works-section, .faq-section {
       width: 100%;
       padding: 20px 20px 40px;
     }
 
-    .services-inner {
+    .services-inner, .visit-inner, .testimonials-inner, .how-it-works-inner, .faq-inner {
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .services-title, .faq-title, .testimonials-title {
+    .services-title, .faq-title, .testimonials-title, .how-it-works-title {
       text-align: center;
       font-size: 1.7rem;
       font-weight: 700;
@@ -350,7 +350,7 @@
       letter-spacing: -0.3px;
     }
 
-    .services-title::after, .faq-title::after, .testimonials-title::after {
+    .services-title::after, .faq-title::after, .testimonials-title::after, .how-it-works-title::after {
       content: "";
       display: block;
       width: 48px;
@@ -360,7 +360,7 @@
       margin: 14px auto 0;
     }
 
-    .services-subtitle, .faq-subtitle, .testimonials-subtitle {
+    .services-subtitle, .faq-subtitle, .testimonials-subtitle, .how-it-works-subtitle {
       text-align: center;
       color: #6c757d;
       font-size: 0.95rem;
@@ -368,6 +368,7 @@
       line-height: 1.5;
     }
 
+    /* ===== SERVIÇOS REMOTOS ===== */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -413,17 +414,59 @@
       text-align: left;
     }
 
-    /* ===== SEÇÃO DE VISITA TÉCNICA ===== */
-    .visit-section {
-      width: 100%;
-      padding: 20px 20px 40px;
+    /* ===== COMO FUNCIONA (NOVO) ===== */
+    .how-it-works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      list-style: none;
+      counter-reset: step-counter;
     }
 
-    .visit-inner {
-      max-width: 900px;
-      margin: 0 auto;
+    .step-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
+    .step-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background-color: #e4f2e9;
+      color: #168A42;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 0 auto 16px;
+    }
+
+    .step-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: #6c757d;
+      line-height: 1.55;
+    }
+
+    /* ===== VISITA TÉCNICA ===== */
     .visit-card {
       background: linear-gradient(135deg, #168A42 0%, #0F6B32 100%);
       border-radius: 20px;
@@ -533,17 +576,7 @@
       transform: translateY(0);
     }
 
-    /* ===== SEÇÃO DE DEPOIMENTOS ===== */
-    .testimonials-section {
-      width: 100%;
-      padding: 20px 20px 40px;
-    }
-
-    .testimonials-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    /* ===== DEPOIMENTOS ===== */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -608,17 +641,7 @@
       color: #868e96;
     }
 
-    /* ===== SEÇÃO FAQ ===== */
-    .faq-section {
-      width: 100%;
-      padding: 20px 20px 64px;
-    }
-
-    .faq-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    /* ===== FAQ ===== */
     .faq-list {
       display: flex;
       flex-direction: column;
@@ -931,24 +954,24 @@
         padding: 14px 28px;
         width: 100%;
       }
-      .services, .visit-section, .testimonials-section {
+      .services, .visit-section, .testimonials-section, .how-it-works-section {
         padding: 12px 16px 32px;
       }
-      .services-title, .faq-title, .testimonials-title {
+      .faq-section {
+        padding: 12px 16px 48px;
+      }
+      .services-title, .faq-title, .testimonials-title, .how-it-works-title {
         font-size: 1.4rem;
       }
-      .services-subtitle, .faq-subtitle, .testimonials-subtitle {
+      .services-subtitle, .faq-subtitle, .testimonials-subtitle, .how-it-works-subtitle {
         font-size: 0.88rem;
         margin-bottom: 28px;
       }
-      .service-card {
+      .service-card, .step-card {
         padding: 18px 16px;
       }
       .service-card h3 {
         font-size: 0.93rem;
-      }
-      .faq-section {
-        padding: 12px 16px 48px;
       }
       .faq-item summary {
         padding: 16px 18px;
@@ -1042,6 +1065,37 @@
           <h3>Consultoria de Informática</h3>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section class="how-it-works-section" aria-labelledby="how-it-works-title">
+    <div class="how-it-works-inner">
+      <h2 id="how-it-works-title" class="how-it-works-title">Como Funciona o Atendimento</h2>
+      <p class="how-it-works-subtitle">Simples, rápido e seguro em 4 passos</p>
+
+      <ol class="how-it-works-grid">
+        <li class="step-card">
+          <div class="step-number">1</div>
+          <h3>Contato</h3>
+          <p>Você entra em contato pelo WhatsApp relatando o problema ou o serviço que deseja.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number">2</div>
+          <h3>Diagnóstico</h3>
+          <p>Avalio a situação e defino a melhor solução, seja remota ou com visita em Valinhos/SP.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number">3</div>
+          <h3>Execução</h3>
+          <p>Realizo o serviço com segurança, mantendo você informado sobre cada etapa do processo.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number">4</div>
+          <h3>Entrega</h3>
+          <p>Testamos tudo junto e você recebe o equipamento pronto para uso, com total garantia.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
