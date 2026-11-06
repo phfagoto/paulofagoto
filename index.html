@@ -13,7 +13,7 @@
   <!-- ===== SEO LOCAL – TÍTULO E DESCRIÇÃO ===== -->
   <title>Paulo Fagoto | Técnico em Informática em Valinhos/SP</title>
   <meta name="description" content="Paulo Fagoto – Técnico em Informática em Valinhos/SP. Serviços remotos e visita técnica para formatação de computadores no local. Otimização do Windows, programas, drivers, impressoras, sistemas, planilhas, sites e consultoria. Contate pelo WhatsApp ou telefone.">
-  <meta name="keywords" content="técnico em informática Valinhos, assistência técnica Valinhos, conserto de computador Valinhos, formatação de computador Valinhos, visita técnica Valinhos, formatação no local Valinhos, suporte remoto Valinhos, otimização windows Valinhos, instalação de programas Valinhos, instalação de impressoras Valinhos, desenvolvimento de sites Valinhos, consultoria de informática Valinhos, técnico informática Valinhos SP">
+  <meta name="keywords" content="técnico em informática Valinhos, assistência técnica Valinhos, conserto de computador Valinhos, formatação de computador Valinhos, visita técnica Valinhos, formatação no local Valinhos, suporte remoto Valinhos, otimização windows Valinhos, instalação de programas Valinhos, instalação de impressoras Valinhos, desenvolvimento de sites Valinhos, consultoria de informática Valinhos, técnico informática Valinhos SP, quanto custa formatar computador Valinhos">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.paulofagoto.com.br/">
 
@@ -37,7 +37,7 @@
   <meta name="twitter:description" content="Técnico em Informática em Valinhos/SP. Serviços remotos e visita técnica para formatação de computadores no local.">
   <meta name="twitter:image" content="https://www.paulofagoto.com.br/paulofagoto.jpg">
 
-  <!-- ===== SCHEMA.ORG – PROFESSIONALSERVICE COM TELEFONE, REDES E SERVIÇOS ===== -->
+  <!-- ===== SCHEMA.ORG – PROFESSIONALSERVICE ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -159,6 +159,56 @@
       "latitude": -22.9705,
       "longitude": -46.9958
     }
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG – FAQPAGE ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual o valor para formatar um computador em Valinhos/SP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O valor depende do estado do equipamento, da versão do Windows e dos programas necessários. Entre em contato pelo WhatsApp para passar os detalhes e receber um orçamento sem compromisso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o atendimento remoto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O atendimento é feito de forma segura e rápida pela internet. Utilizo softwares confiáveis de acesso remoto para resolver problemas de Windows, instalação de programas, impressoras e consultoria, sem você precisar sair de casa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Você faz visita técnica para formatação em Valinhos/SP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Realizo visitas técnicas exclusivas para formatação de computadores na cidade de Valinhos/SP, resolvendo tudo no local com comodidade e segurança para você."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Meus arquivos e dados estão seguros durante o serviço?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, a segurança é prioridade. Antes de qualquer formatação, sempre verifico com você quais arquivos precisam ser salvos (backup) para que nada importante seja perdido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Você atende empresas ou apenas residências?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atendo tanto residências quanto pequenas e médias empresas, oferecendo suporte para computadores, planilhas, sistemas e infraestrutura de redes."
+        }
+      }
+    ]
   }
   </script>
 
@@ -339,7 +389,7 @@
     /* ===== SEÇÃO DE VISITA TÉCNICA ===== */
     .visit-section {
       width: 100%;
-      padding: 20px 20px 64px;
+      padding: 20px 20px 40px;
     }
 
     .visit-inner {
@@ -454,6 +504,112 @@
 
     .btn-visit:active {
       transform: translateY(0);
+    }
+
+    /* ===== SEÇÃO FAQ ===== */
+    .faq-section {
+      width: 100%;
+      padding: 20px 20px 64px;
+    }
+
+    .faq-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-title {
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .faq-title::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 3px;
+      background-color: #168A42;
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    .faq-subtitle {
+      text-align: center;
+      color: #6c757d;
+      font-size: 0.95rem;
+      margin: 14px 0 36px;
+      line-height: 1.5;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .faq-item[open] {
+      border-color: #168A42;
+      box-shadow: 0 4px 16px rgba(22, 138, 66, 0.08);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: color 0.2s ease;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary:hover {
+      color: #168A42;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #e4f2e9;
+      color: #168A42;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, background-color 0.2s ease;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(180deg);
+      background-color: #168A42;
+      color: #ffffff;
+    }
+
+    .faq-answer {
+      padding: 0 24px 22px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #495057;
+      text-align: left;
     }
 
     /* ===== RODAPÉ TRADICIONAL EQUILIBRADO ===== */
@@ -685,7 +841,25 @@
         font-size: 0.93rem;
       }
       .visit-section {
+        padding: 12px 16px 32px;
+      }
+      .faq-section {
         padding: 12px 16px 48px;
+      }
+      .faq-title {
+        font-size: 1.4rem;
+      }
+      .faq-subtitle {
+        font-size: 0.88rem;
+        margin-bottom: 28px;
+      }
+      .faq-item summary {
+        padding: 16px 18px;
+        font-size: 0.95rem;
+      }
+      .faq-answer {
+        padding: 0 18px 18px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -713,7 +887,6 @@
       <p class="services-subtitle">Atendimento remoto para Valinhos/SP e região, com agilidade e segurança</p>
 
       <ul class="services-grid">
-
         <li class="service-card">
           <span class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -722,7 +895,6 @@
           </span>
           <h3>Otimização, Configuração e Correção do Windows</h3>
         </li>
-
         <li class="service-card">
           <span class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -731,7 +903,6 @@
           </span>
           <h3>Instalação e Configuração de Programas e Drivers</h3>
         </li>
-
         <li class="service-card">
           <span class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -740,7 +911,6 @@
           </span>
           <h3>Instalação e Configuração de Impressoras Domésticas e Fiscais</h3>
         </li>
-
         <li class="service-card">
           <span class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -749,7 +919,6 @@
           </span>
           <h3>Desenvolvimento de Sistemas e Planilhas</h3>
         </li>
-
         <li class="service-card">
           <span class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -758,7 +927,6 @@
           </span>
           <h3>Desenvolvimento de Sites</h3>
         </li>
-
         <li class="service-card">
           <span class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -767,7 +935,6 @@
           </span>
           <h3>Consultoria de Informática</h3>
         </li>
-
       </ul>
     </div>
   </section>
@@ -792,6 +959,76 @@
             Agendar visita pelo WhatsApp
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERGUNTAS FREQUENTES ===== -->
+  <section class="faq-section" aria-labelledby="faq-title">
+    <div class="faq-inner">
+      <h2 id="faq-title" class="faq-title">Perguntas Frequentes</h2>
+      <p class="faq-subtitle">Tire suas dúvidas sobre os serviços de informática em Valinhos/SP</p>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            Qual o valor para formatar um computador em Valinhos/SP?
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            O valor depende do estado do equipamento, da versão do Windows e dos programas necessários. Entre em contato pelo WhatsApp para passar os detalhes e receber um orçamento sem compromisso.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Como funciona o atendimento remoto?
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            O atendimento é feito de forma segura e rápida pela internet. Utilizo softwares confiáveis de acesso remoto para resolver problemas de Windows, instalação de programas, impressoras e consultoria, sem você precisar sair de casa.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Você faz visita técnica para formatação em Valinhos/SP?
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Sim! Realizo visitas técnicas exclusivas para formatação de computadores na cidade de Valinhos/SP, resolvendo tudo no local com comodidade e segurança para você.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Meus arquivos e dados estão seguros durante o serviço?
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Sim, a segurança é prioridade. Antes de qualquer formatação, sempre verifico com você quais arquivos precisam ser salvos (backup) para que nada importante seja perdido.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Você atende empresas ou apenas residências?
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Atendo tanto residências quanto pequenas e médias empresas, oferecendo suporte para computadores, planilhas, sistemas e infraestrutura de redes.
+          </div>
+        </details>
       </div>
     </div>
   </section>
