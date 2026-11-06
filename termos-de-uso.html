@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== FAVICONS ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== SEO LOCAL ===== -->
+  <title>Termos de Uso | Paulo Fagoto</title>
+  <meta name="description" content="Termos de Uso do site de Paulo Fagoto, Técnico em Informática em Valinhos/SP. Conheça as regras de utilização do site e a prestação dos serviços.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.paulofagoto.com.br/termos-de-uso.html">
+
+  <!-- ===== ESTILO ===== -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ===== HEADER SIMPLIFICADO ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      z-index: 900;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #1a1a2e;
+      transition: opacity 0.2s ease;
+    }
+
+    .header-brand:hover {
+      opacity: 0.8;
+    }
+
+    .header-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 2px solid #e9ecef;
+    }
+
+    .header-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #168A42;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #e4f2e9;
+    }
+
+    /* ===== CONTEÚDO ===== */
+    .main-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .legal-container {
+      max-width: 800px;
+      width: 100%;
+      background: #ffffff;
+      padding: 48px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      text-align: left;
+    }
+
+    .legal-container h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+
+    .legal-update {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #868e96;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .legal-container h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .legal-container p {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #495057;
+      margin-bottom: 14px;
+    }
+
+    .legal-container ul {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .legal-container ul li {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #495057;
+      margin-bottom: 8px;
+    }
+
+    .legal-container strong {
+      color: #1a1a2e;
+    }
+
+    .legal-container a {
+      color: #168A42;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .legal-container a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== RODAPÉ ===== */
+    .site-footer {
+      width: 100%;
+      background-color: #1a1a2e;
+      color: #adb5bd;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2d2d44;
+      background-color: #14142a;
+    }
+
+    .footer-bottom-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      color: #868e96;
+    }
+
+    .footer-bottom-inner p {
+      margin: 0;
+    }
+
+    .footer-copyright {
+      font-weight: 600;
+      color: #adb5bd;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-legal-links a {
+      color: #adb5bd;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #168A42;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 10px 16px;
+      }
+      .legal-container {
+        padding: 32px 20px;
+      }
+      .legal-container h1 {
+        font-size: 1.5rem;
+      }
+      .legal-container h2 {
+        font-size: 1.15rem;
+      }
+      .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.74rem;
+      }
+      .footer-legal-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="header-brand" aria-label="Paulo Fagoto - Página inicial">
+        <img src="paulofagoto.jpg" alt="Paulo Fagoto" class="header-logo">
+        <span class="header-name">Paulo Fagoto</span>
+      </a>
+      <nav aria-label="Navegação">
+        <a href="/" class="nav-link">Início</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="legal-container">
+      <h1>Termos de Uso</h1>
+      <p class="legal-update">Última atualização: 6 de novembro de 2026.</p>
+
+      <p>Bem-vindo ao site <strong>www.paulofagoto.com.br</strong> (“Site”), de propriedade e operação de <strong>Paulo Fagoto</strong>, profissional autônomo, com atuação em Valinhos/SP (“nós”, “nosso” ou “Paulo Fagoto”).</p>
+      <p>Estes Termos de Uso (“Termos”) regulam o acesso e a utilização do Site. Ao acessar ou utilizar o Site, você (“Usuário”) declara ter lido, compreendido e concordado com todas as condições abaixo. Caso não concorde, solicitamos que não utilize o Site.</p>
+
+      <h2>1. Objeto do Site</h2>
+      <p>O Site tem como finalidade divulgar os serviços de informática prestados por Paulo Fagoto, incluindo, mas não se limitando a: suporte remoto, visita técnica para formatação de computadores em Valinhos/SP, otimização do Windows, instalação de programas e drivers, configuração de impressoras, desenvolvimento de sistemas, planilhas e sites, e consultoria de informática.</p>
+      <p>O Site tem caráter <strong>informativo e de divulgação</strong>. A contratação efetiva de qualquer serviço dependerá de contato direto, elaboração de orçamento e aceite mútuo entre as partes.</p>
+
+      <h2>2. Uso do Site</h2>
+      <p>O Usuário se compromete a utilizar o Site de forma lícita, ética e em conformidade com a legislação brasileira, especialmente o <strong>Marco Civil da Internet (Lei nº 12.965/2014)</strong>, o <strong>Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong> e a <strong>LGPD (Lei nº 13.709/2018)</strong>.</p>
+      <p>É expressamente proibido:</p>
+      <ul>
+        <li>Utilizar o Site para fins ilícitos, fraudulentos ou que violem direitos de terceiros.</li>
+        <li>Tentar acessar áreas restritas, sistemas ou dados sem autorização.</li>
+        <li>Copiar, reproduzir, distribuir ou modificar o conteúdo do Site sem autorização prévia por escrito.</li>
+        <li>Utilizar mecanismos automatizados (robôs, spiders, scrapers) para coletar dados do Site de forma massiva.</li>
+      </ul>
+
+      <h2>3. Propriedade Intelectual</h2>
+      <p>Todo o conteúdo do Site — incluindo textos, imagens, logotipos, ícones, layout, código-fonte e demais elementos — é de propriedade exclusiva de <strong>Paulo Fagoto</strong> ou de seus licenciantes, sendo protegido pelas leis de direitos autorais (Lei nº 9.610/1998) e de propriedade industrial (Lei nº 9.279/1996).</p>
+      <p>É vedada a reprodução, distribuição, modificação ou utilização de qualquer conteúdo do Site para fins comerciais sem autorização prévia e expressa.</p>
+
+      <h2>4. Responsabilidades</h2>
+      <ul>
+        <li><strong>Do Site:</strong> O Site é fornecido “como está”. Envidamos esforços para manter as informações atualizadas e o Site disponível, mas não garantimos que o acesso será ininterrupto, livre de erros ou de falhas técnicas. Não nos responsabilizamos por danos decorrentes de indisponibilidade temporária, falhas de conexão ou problemas no dispositivo do Usuário.</li>
+        <li><strong>Do Usuário:</strong> O Usuário é responsável pelas informações que fornece e pelo uso que faz do Site. O Usuário concorda em nos isentar de qualquer responsabilidade por danos que possam surgir do uso indevido do Site ou da violação destes Termos.</li>
+        <li><strong>Dos Serviços:</strong> As informações sobre serviços no Site não constituem uma oferta vinculante. A prestação de serviços será regida por contrato ou orçamento específico, com escopo, prazos e valores definidos em cada caso.</li>
+      </ul>
+
+      <h2>5. Links para Sites de Terceiros</h2>
+      <p>O Site pode conter links para sites de terceiros (ex: redes sociais, WhatsApp, ferramentas do Google). Não controlamos nem nos responsabilizamos pelo conteúdo, políticas de privacidade ou práticas desses sites. Recomendamos que o Usuário leia os termos e políticas de cada site visitado.</p>
+
+      <h2>6. Privacidade e Proteção de Dados</h2>
+      <p>O tratamento de dados pessoais realizado no âmbito do Site observa a <strong>LGPD (Lei nº 13.709/2018)</strong> e está detalhado em nossa <a href="/politica-de-privacidade.html">Política de Privacidade</a>, que integra estes Termos para todos os fins. Recomendamos a leitura atenta da Política de Privacidade.</p>
+
+      <h2>7. Alterações nos Termos</h2>
+      <p>Reservamo-nos o direito de alterar estes Termos a qualquer momento, sem aviso prévio. As alterações entrarão em vigor na data de sua publicação no Site. O uso continuado do Site após a publicação de novos Termos constitui aceitação das mudanças.</p>
+
+      <h2>8. Legislação Aplicável e Foro</h2>
+      <p>Estes Termos são regidos e interpretados de acordo com as leis brasileiras. Para a resolução de quaisquer controvérsias decorrentes destes Termos ou do uso do Site, fica eleito o foro da <strong>Comarca de Valinhos/SP</strong>, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
+
+      <h2>9. Contato</h2>
+      <p>Para esclarecer dúvidas sobre estes Termos de Uso, entre em contato pelo e-mail <strong>phfagoto@gmail.com</strong>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">© <span id="year">2026</span> Paulo Fagoto. Todos os direitos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+          <a href="/termos-de-uso.html">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

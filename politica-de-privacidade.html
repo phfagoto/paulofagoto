@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== FAVICONS ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== SEO LOCAL ===== -->
+  <title>Política de Privacidade | Paulo Fagoto</title>
+  <meta name="description" content="Política de Privacidade do site de Paulo Fagoto, Técnico em Informática em Valinhos/SP. Saiba como seus dados são coletados, usados e protegidos.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.paulofagoto.com.br/politica-de-privacidade.html">
+
+  <!-- ===== ESTILO ===== -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ===== HEADER SIMPLIFICADO ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      z-index: 900;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #1a1a2e;
+      transition: opacity 0.2s ease;
+    }
+
+    .header-brand:hover {
+      opacity: 0.8;
+    }
+
+    .header-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 2px solid #e9ecef;
+    }
+
+    .header-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #168A42;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #e4f2e9;
+    }
+
+    /* ===== CONTEÚDO ===== */
+    .main-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .legal-container {
+      max-width: 800px;
+      width: 100%;
+      background: #ffffff;
+      padding: 48px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      text-align: left;
+    }
+
+    .legal-container h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+
+    .legal-update {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #868e96;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .legal-container h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .legal-container h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .legal-container p {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #495057;
+      margin-bottom: 14px;
+    }
+
+    .legal-container ul {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .legal-container ul li {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #495057;
+      margin-bottom: 8px;
+    }
+
+    .legal-container strong {
+      color: #1a1a2e;
+    }
+
+    .legal-container a {
+      color: #168A42;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .legal-container a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== RODAPÉ ===== */
+    .site-footer {
+      width: 100%;
+      background-color: #1a1a2e;
+      color: #adb5bd;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2d2d44;
+      background-color: #14142a;
+    }
+
+    .footer-bottom-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      color: #868e96;
+    }
+
+    .footer-bottom-inner p {
+      margin: 0;
+    }
+
+    .footer-copyright {
+      font-weight: 600;
+      color: #adb5bd;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-legal-links a {
+      color: #adb5bd;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #168A42;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 10px 16px;
+      }
+      .legal-container {
+        padding: 32px 20px;
+      }
+      .legal-container h1 {
+        font-size: 1.5rem;
+      }
+      .legal-container h2 {
+        font-size: 1.15rem;
+      }
+      .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.74rem;
+      }
+      .footer-legal-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="header-brand" aria-label="Paulo Fagoto - Página inicial">
+        <img src="paulofagoto.jpg" alt="Paulo Fagoto" class="header-logo">
+        <span class="header-name">Paulo Fagoto</span>
+      </a>
+      <nav aria-label="Navegação">
+        <a href="/" class="nav-link">Início</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="legal-container">
+      <h1>Política de Privacidade</h1>
+      <p class="legal-update">Última atualização: 6 de novembro de 2026.</p>
+
+      <p>Esta Política de Privacidade descreve como <strong>Paulo Fagoto</strong> (“nós”, “nosso” ou “Paulo Fagoto”), profissional autônomo, com atuação em Valinhos/SP, coleta, usa, armazena e protege as informações pessoais dos visitantes do site <strong>www.paulofagoto.com.br</strong> (“Site”).</p>
+      <p>Ao acessar e utilizar o Site, você concorda com as práticas descritas nesta Política.</p>
+
+      <h2>1. Quem é o Controlador dos Dados</h2>
+      <p>O controlador dos dados pessoais coletados por meio deste Site é <strong>Paulo Fagoto</strong>, profissional autônomo, com endereço profissional em Valinhos/SP. Para fins de comunicação sobre privacidade, o canal oficial é o e-mail <strong>phfagoto@gmail.com</strong>.</p>
+
+      <h2>2. Quais Dados Coletamos</h2>
+      <p>A coleta de dados é mínima e limitada ao necessário para a prestação dos serviços de informática e para o funcionamento do Site.</p>
+      <ul>
+        <li><strong>Dados fornecidos por você:</strong> Nome e telefone/WhatsApp (quando você clica nos botões de contato), endereço de e-mail (caso opte por entrar em contato por e-mail) e o conteúdo da mensagem que você compartilhar.</li>
+        <li><strong>Dados coletados automaticamente (cookies e tecnologias similares):</strong> Endereço IP, tipo de navegador, páginas visitadas, data e hora de acesso, e informações do dispositivo (ex: celular ou computador).</li>
+        <li><strong>Cookies de terceiros:</strong> Este Site pode utilizar cookies de terceiros, incluindo o <strong>Google</strong>, para medir a audiência e o desempenho do Site (Google Analytics) e exibir anúncios relevantes (Google AdSense), que podem ser personalizados com base em suas visitas a este e a outros sites.</li>
+      </ul>
+
+      <h2>3. Para Que Utilizamos Seus Dados (Finalidades e Bases Legais)</h2>
+      <p>Cada tratamento de dados é realizado com uma finalidade específica e amparado por uma base legal prevista no art. 7º da LGPD.</p>
+      <ul>
+        <li><strong>Prestação de serviços e atendimento:</strong> Utilizar seu nome, telefone e mensagem para responder ao seu contato, elaborar orçamentos e executar os serviços solicitados. <em>Base legal: execução de contrato (art. 7º, V).</em></li>
+        <li><strong>Melhoria do Site:</strong> Utilizar dados de navegação para entender como o Site é utilizado e aprimorar o conteúdo e a usabilidade. <em>Base legal: legítimo interesse (art. 7º, IX).</em></li>
+        <li><strong>Publicidade e medição de audiência:</strong> Utilizar cookies de terceiros para exibir anúncios e medir o desempenho. <em>Base legal: consentimento (art. 7º, I), solicitado por meio do banner de cookies.</em></li>
+        <li><strong>Cumprimento de obrigações legais:</strong> Quando necessário para atender a determinações de autoridades competentes. <em>Base legal: cumprimento de obrigação legal (art. 7º, II).</em></li>
+      </ul>
+
+      <h2>4. Compartilhamento de Dados com Terceiros</h2>
+      <p>Não vendemos nem alugamos seus dados pessoais. O compartilhamento ocorre apenas nas seguintes situações:</p>
+      <ul>
+        <li><strong>Provedores de serviços:</strong> Empresas que nos auxiliam a operar o Site e prestar os serviços, como serviços de hospedagem (GitHub Pages) e ferramentas de análise (Google Analytics).</li>
+        <li><strong>Parceiros de publicidade (Google AdSense):</strong> Quando o AdSense estiver ativo, o Google e seus parceiros poderão utilizar cookies para veicular anúncios. Você pode gerenciar suas preferências acessando as <a href="https://adssettings.google.com" target="_blank" rel="noopener">Configurações de Anúncios do Google</a> ou o site <a href="https://www.aboutads.info" target="_blank" rel="noopener">www.aboutads.info</a>.</li>
+        <li><strong>Obrigação legal:</strong> Quando formos obrigados por lei ou por ordem judicial a fornecer informações.</li>
+      </ul>
+
+      <h2>5. Cookies e Tecnologias Similares</h2>
+      <p>Cookies são pequenos arquivos de texto armazenados no seu navegador. Utilizamos cookies para lembrar suas preferências de consentimento, analisar o tráfego do Site e exibir anúncios personalizados.</p>
+      <p>Você pode gerenciar ou desabilitar os cookies nas configurações do seu navegador. No entanto, a desativação de determinados cookies pode impactar sua experiência no Site. Ao continuar navegando após o banner de cookies, você concorda com o uso de cookies conforme descrito nesta Política.</p>
+
+      <h2>6. Transferência Internacional de Dados</h2>
+      <p>Alguns dos nossos provedores de serviços (como Google e GitHub) estão localizados fora do Brasil. Nesses casos, a transferência de dados ocorre apenas para países que proporcionam um nível de proteção adequado ou mediante a adoção de garantias contratuais, conforme exigido pela LGPD (arts. 33 a 36).</p>
+
+      <h2>7. Por Quanto Tempo Guardamos Seus Dados</h2>
+      <ul>
+        <li><strong>Dados de contato e mensagens:</strong> São mantidos enquanto durar a relação de prestação de serviços e, após o término, pelo prazo necessário para cumprimento de obrigações legais ou para o exercício regular de direitos.</li>
+        <li><strong>Dados de navegação e cookies:</strong> São retidos conforme os prazos definidos pelas ferramentas de terceiros ou até que você solicite a exclusão.</li>
+      </ul>
+
+      <h2>8. Seus Direitos como Titular de Dados</h2>
+      <p>A LGPD garante a você, a qualquer momento e mediante requisição, os seguintes direitos (art. 18):</p>
+      <ul>
+        <li>Confirmação e acesso aos seus dados;</li>
+        <li>Correção de dados incompletos ou desatualizados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+        <li>Portabilidade dos dados a outro fornecedor;</li>
+        <li>Eliminação dos dados tratados com base no consentimento;</li>
+        <li>Informação sobre compartilhamento de dados;</li>
+        <li>Revogação do consentimento a qualquer momento.</li>
+      </ul>
+      <p>Para exercer seus direitos, entre em contato pelo e-mail <strong>phfagoto@gmail.com</strong>. Responderemos em até <strong>15 dias</strong>, conforme o art. 19 da LGPD.</p>
+
+      <h2>9. Segurança dos Dados</h2>
+      <p>Adotamos medidas técnicas e administrativas razoáveis para proteger seus dados pessoais contra acessos não autorizados, perda, destruição ou alteração. No entanto, nenhum sistema é totalmente imune a incidentes. Caso ocorra um incidente relevante, comunicaremos você e a Autoridade Nacional de Proteção de Dados (ANPD), conforme exigido pela LGPD.</p>
+
+      <h2>10. Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. A data da última atualização será sempre indicada no topo do documento. Recomendamos que você revise esta página regularmente.</p>
+
+      <h2>11. Contato</h2>
+      <p>Para dúvidas, solicitações ou reclamações relacionadas a esta Política de Privacidade ou ao tratamento de seus dados pessoais, entre em contato pelo e-mail <strong>phfagoto@gmail.com</strong>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">© <span id="year">2026</span> Paulo Fagoto. Todos os direitos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+          <a href="/termos-de-uso.html">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
