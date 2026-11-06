@@ -3,6 +3,86 @@
    Centraliza o JavaScript de todas as páginas do site.
    ============================================================ */
 
+// ===== CONFIGURAÇÃO DO HORÁRIO DE ATENDIMENTO =====
+// Segunda a domingo, das 06:00 às 21:30 (horário de São Paulo)
+const SCHEDULE_OPEN = { hours: 6, minutes: 0 };
+const SCHEDULE_CLOSE = { hours: 21, minutes: 30 };
+
+// ===== UTILITÁRIOS =====
+
+// Obtém a data/hora atual no fuso horário de São Paulo
+function getSaoPauloTime() {
+  const now = new Date();
+  const spString = now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' });
+  return new Date(spString);
+}
+
+// Formata uma duração (em segundos) em texto legível
+// Ex: 3661 => "1h 1m 1s" | 125 => "2m 5s" | 45 => "45s"
+function formatDuration(totalSeconds) {
+  if (totalSeconds < 0) totalSeconds = 0;
+  const h = Math.floor(totalSeconds / 3600);
+  const m = Math.floor((totalSeconds % 3600) / 60);
+  const s = totalSeconds % 60;
+
+  const parts = [];
+  if (h > 0) parts.push(h + 'h');
+  if (m > 0 || h > 0) parts.push(m + 'm');
+  parts.push(s + 's');
+
+  return parts.join(' ');
+}
+
+// ===== ATUALIZAÇÃO DO STATUS E CRONÔMETRO =====
+function updateScheduleStatus() {
+  const sp = getSaoPauloTime();
+  const hours = sp.getHours();
+  const minutes = sp.getMinutes();
+  const seconds = sp.getSeconds();
+
+  const nowSeconds = hours * 3600 + minutes * 60 + seconds;
+  const openSeconds = SCHEDULE_OPEN.hours * 3600 + SCHEDULE_OPEN.minutes * 60;
+  const closeSeconds = SCHEDULE_CLOSE.hours * 3600 + SCHEDULE_CLOSE.minutes * 60;
+
+  const isOnline = nowSeconds >= openSeconds && nowSeconds < closeSeconds;
+
+  // ===== Atualiza a barra de status no topo =====
+  const statusBar = document.getElementById('status-bar');
+  const statusText = document.getElementById('status-text');
+
+  if (statusBar && statusText) {
+    if (isOnline) {
+      statusBar.classList.remove('offline');
+      statusBar.classList.add('online');
+      statusText.textContent = 'Atendimento Online';
+    } else {
+      statusBar.classList.remove('online');
+      statusBar.classList.add('offline');
+      statusText.textContent = 'Atendimento Offline';
+    }
+  }
+
+  // ===== Atualiza o cronômetro na página inicial =====
+  const countdownText = document.getElementById('schedule-countdown-text');
+  if (countdownText) {
+    if (isOnline) {
+      const remaining = closeSeconds - nowSeconds;
+      countdownText.innerHTML = 'Encerra em <strong>' + formatDuration(remaining) + '</strong>';
+    } else {
+      let remaining;
+      if (nowSeconds < openSeconds) {
+        // Antes de abrir hoje
+        remaining = openSeconds - nowSeconds;
+      } else {
+        // Depois de fechar hoje: abre amanhã às 06:00
+        remaining = (24 * 3600 - nowSeconds) + openSeconds;
+      }
+      countdownText.innerHTML = 'Abre em <strong>' + formatDuration(remaining) + '</strong>';
+    }
+  }
+}
+
+// ===== INICIALIZAÇÃO =====
 document.addEventListener('DOMContentLoaded', () => {
   // ===== Ano dinâmico no rodapé =====
   const yearEl = document.getElementById('year');
@@ -35,4 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // ===== Status de Atendimento em Tempo Real =====
+  updateScheduleStatus();
+  setInterval(updateScheduleStatus, 1000);
 });

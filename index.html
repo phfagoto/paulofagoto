@@ -10,20 +10,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ===== SEO LOCAL – TÍTULO E DESCRIÇÃO ===== -->
+  <!-- ===== SEO LOCAL ===== -->
   <title>Paulo Fagoto | Técnico em Informática em Valinhos/SP</title>
   <meta name="description" content="Paulo Fagoto – Técnico em Informática em Valinhos/SP. Atendimento todos os dias das 06:00 às 21:30. Serviços remotos e visita técnica para formatação de computadores no local. Otimização do Windows, programas, drivers, impressoras, sistemas, planilhas, sites e consultoria. Contate pelo WhatsApp ou telefone.">
   <meta name="keywords" content="técnico em informática Valinhos, assistência técnica Valinhos, conserto de computador Valinhos, formatação de computador Valinhos, visita técnica Valinhos, formatação no local Valinhos, suporte remoto Valinhos, otimização windows Valinhos, instalação de programas Valinhos, instalação de impressoras Valinhos, desenvolvimento de sites Valinhos, consultoria de informática Valinhos, técnico informática Valinhos SP, quanto custa formatar computador Valinhos, técnico informática fim de semana Valinhos">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.paulofagoto.com.br/">
 
-  <!-- ===== GEO TAGS – FORTALECEM O SEO LOCAL ===== -->
+  <!-- ===== GEO TAGS ===== -->
   <meta name="geo.region" content="BR-SP">
   <meta name="geo.placename" content="Valinhos">
   <meta name="geo.position" content="-22.9705;-46.9958">
   <meta name="ICBM" content="-22.9705, -46.9958">
 
-  <!-- ===== OPEN GRAPH (REDES SOCIAIS) ===== -->
+  <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Paulo Fagoto | Técnico em Informática em Valinhos/SP">
   <meta property="og:description" content="Técnico em Informática em Valinhos/SP. Atendimento todos os dias das 06:00 às 21:30. Serviços remotos e visita técnica para formatação de computadores no local.">
@@ -268,6 +268,12 @@
 
   <!-- ===== HEADER / MENU DE NAVEGAÇÃO ===== -->
   <header class="site-header">
+    <!-- Barra de status em tempo real -->
+    <div class="status-bar" id="status-bar" aria-live="polite">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="status-text">Verificando status...</span>
+    </div>
+
     <div class="header-inner">
       <a href="/" class="header-brand" aria-label="Paulo Fagoto - Página inicial">
         <img src="paulofagoto.jpg" alt="Paulo Fagoto" class="header-logo">
@@ -297,6 +303,13 @@
           <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
         </svg>
         <span>Atendimento todos os dias: <strong>06:00 às 21:30</strong></span>
+      </p>
+
+      <p class="schedule-countdown" id="schedule-countdown">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a8.994 8.994 0 007.03-14.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/>
+        </svg>
+        <span id="schedule-countdown-text"></span>
       </p>
     </main>
   </div>
