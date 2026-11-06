@@ -22,6 +22,12 @@
 <body>
 
   <header class="site-header">
+    <!-- Barra de status em tempo real -->
+    <div class="status-bar" id="status-bar" aria-live="polite">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="status-text">Verificando status...</span>
+    </div>
+
     <div class="header-inner">
       <a href="/" class="header-brand" aria-label="Paulo Fagoto - Página inicial">
         <img src="paulofagoto.jpg" alt="Paulo Fagoto" class="header-logo">
