@@ -12,8 +12,8 @@
 
   <!-- ===== SEO LOCAL – TÍTULO E DESCRIÇÃO ===== -->
   <title>Paulo Fagoto | Técnico em Informática em Valinhos/SP</title>
-  <meta name="description" content="Paulo Fagoto – Técnico em Informática em Valinhos/SP. Serviços remotos e visita técnica para formatação de computadores no local. Otimização do Windows, programas, drivers, impressoras, sistemas, planilhas, sites e consultoria. Contate pelo WhatsApp ou telefone.">
-  <meta name="keywords" content="técnico em informática Valinhos, assistência técnica Valinhos, conserto de computador Valinhos, formatação de computador Valinhos, visita técnica Valinhos, formatação no local Valinhos, suporte remoto Valinhos, otimização windows Valinhos, instalação de programas Valinhos, instalação de impressoras Valinhos, desenvolvimento de sites Valinhos, consultoria de informática Valinhos, técnico informática Valinhos SP, quanto custa formatar computador Valinhos">
+  <meta name="description" content="Paulo Fagoto – Técnico em Informática em Valinhos/SP. Atendimento todos os dias das 06:00 às 21:30. Serviços remotos e visita técnica para formatação de computadores no local. Otimização do Windows, programas, drivers, impressoras, sistemas, planilhas, sites e consultoria. Contate pelo WhatsApp ou telefone.">
+  <meta name="keywords" content="técnico em informática Valinhos, assistência técnica Valinhos, conserto de computador Valinhos, formatação de computador Valinhos, visita técnica Valinhos, formatação no local Valinhos, suporte remoto Valinhos, otimização windows Valinhos, instalação de programas Valinhos, instalação de impressoras Valinhos, desenvolvimento de sites Valinhos, consultoria de informática Valinhos, técnico informática Valinhos SP, quanto custa formatar computador Valinhos, técnico informática fim de semana Valinhos">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.paulofagoto.com.br/">
 
@@ -26,7 +26,7 @@
   <!-- ===== OPEN GRAPH (REDES SOCIAIS) ===== -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Paulo Fagoto | Técnico em Informática em Valinhos/SP">
-  <meta property="og:description" content="Técnico em Informática em Valinhos/SP. Serviços remotos e visita técnica para formatação de computadores no local. Fale pelo WhatsApp ou telefone.">
+  <meta property="og:description" content="Técnico em Informática em Valinhos/SP. Atendimento todos os dias das 06:00 às 21:30. Serviços remotos e visita técnica para formatação de computadores no local.">
   <meta property="og:url" content="https://www.paulofagoto.com.br/">
   <meta property="og:image" content="https://www.paulofagoto.com.br/paulofagoto.jpg">
   <meta property="og:locale" content="pt_BR">
@@ -34,7 +34,7 @@
   <!-- ===== TWITTER CARD ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Paulo Fagoto | Técnico em Informática em Valinhos/SP">
-  <meta name="twitter:description" content="Técnico em Informática em Valinhos/SP. Serviços remotos e visita técnica para formatação de computadores no local.">
+  <meta name="twitter:description" content="Técnico em Informática em Valinhos/SP. Atendimento todos os dias das 06:00 às 21:30.">
   <meta name="twitter:image" content="https://www.paulofagoto.com.br/paulofagoto.jpg">
 
   <!-- ===== SCHEMA.ORG – PROFESSIONALSERVICE ===== -->
@@ -44,7 +44,7 @@
     "@type": "ProfessionalService",
     "@id": "https://www.paulofagoto.com.br/#business",
     "name": "Paulo Fagoto - Técnico em Informática",
-    "description": "Técnico em informática em Valinhos/SP, especializado em formatação de computadores, suporte remoto e visita técnica.",
+    "description": "Técnico em informática em Valinhos/SP, especializado em formatação de computadores, suporte remoto e visita técnica. Atendimento todos os dias das 06:00 às 21:30.",
     "url": "https://www.paulofagoto.com.br",
     "image": "https://www.paulofagoto.com.br/paulofagoto.jpg",
     "telephone": "+5519971540808",
@@ -72,6 +72,20 @@
       "name": "Paulo Fagoto",
       "telephone": "+5519971540808",
       "email": "phfagoto@gmail.com"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "06:00",
+      "closes": "21:30"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -205,6 +219,14 @@
       },
       {
         "@type": "Question",
+        "name": "Qual é o horário de atendimento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atendo todos os dias da semana, de segunda a segunda (inclusive sábados, domingos e feriados), das 06:00 às 21:30. Basta chamar no WhatsApp para agendar."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Como funciona o atendimento remoto?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -330,6 +352,28 @@
       transform: translateY(0);
     }
 
+    /* ===== HORÁRIO NO CARD PRINCIPAL ===== */
+    .schedule-info {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #6c757d;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .schedule-info svg {
+      color: #168A42;
+      flex-shrink: 0;
+    }
+
+    .schedule-info strong {
+      color: #1a1a2e;
+      font-weight: 700;
+    }
+
     /* ===== ESTILOS GERAIS DE SEÇÕES ===== */
     .services, .visit-section, .testimonials-section, .how-it-works-section, .faq-section {
       width: 100%;
@@ -414,13 +458,12 @@
       text-align: left;
     }
 
-    /* ===== COMO FUNCIONA (NOVO) ===== */
+    /* ===== COMO FUNCIONA ===== */
     .how-it-works-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       list-style: none;
-      counter-reset: step-counter;
     }
 
     .step-card {
@@ -814,7 +857,8 @@
       margin-bottom: 9px;
     }
 
-    .footer-col ul li a {
+    .footer-col ul li a,
+    .footer-col ul li span {
       display: inline-flex;
       align-items: center;
       gap: 9px;
@@ -828,7 +872,7 @@
       color: #168A42;
     }
 
-    .footer-col ul li a svg {
+    .footer-col ul li svg {
       flex-shrink: 0;
       color: #168A42;
     }
@@ -954,6 +998,10 @@
         padding: 14px 28px;
         width: 100%;
       }
+      .schedule-info {
+        font-size: 0.8rem;
+        margin-top: 16px;
+      }
       .services, .visit-section, .testimonials-section, .how-it-works-section {
         padding: 12px 16px 32px;
       }
@@ -1006,6 +1054,13 @@
         </svg>
         Fale comigo no WhatsApp
       </a>
+
+      <p class="schedule-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+        </svg>
+        <span>Atendimento todos os dias: <strong>06:00 às 21:30</strong></span>
+      </p>
     </main>
   </div>
 
@@ -1193,6 +1248,18 @@
 
         <details class="faq-item">
           <summary>
+            Qual é o horário de atendimento?
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Atendo todos os dias da semana, de segunda a segunda (inclusive sábados, domingos e feriados), das 06:00 às 21:30. Basta chamar no WhatsApp para agendar.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
             Como funciona o atendimento remoto?
             <span class="faq-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -1291,6 +1358,14 @@
               </svg>
               www.paulofagoto.com.br
             </a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+              </svg>
+              Seg a Dom: 06:00 às 21:30
+            </span>
           </li>
         </ul>
       </div>
