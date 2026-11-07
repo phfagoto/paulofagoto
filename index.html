@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ===== GOOGLE ANALYTICS (GA4) ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY0WNJ1C0E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MY0WNJ1C0E');
+  </script>
+
   <!-- ===== FAVICONS ===== -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -268,7 +277,6 @@
 
   <!-- ===== HEADER / MENU DE NAVEGAÇÃO ===== -->
   <header class="site-header">
-    <!-- Barra de status em tempo real -->
     <div class="status-bar" id="status-bar" aria-live="polite">
       <span class="status-dot" aria-hidden="true"></span>
       <span id="status-text">Verificando status...</span>
