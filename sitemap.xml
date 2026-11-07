@@ -16,6 +16,19 @@
   </url>
 
   <url>
+    <loc>https://www.paulofagoto.com.br/sobremim.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+
+    <image:image>
+      <image:loc>https://www.paulofagoto.com.br/paulofagoto.jpg</image:loc>
+      <image:title>Paulo Fagoto - Técnico em Informática em Valinhos/SP</image:title>
+      <image:caption>Foto de Paulo Fagoto, técnico em informática em Valinhos/SP</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://www.paulofagoto.com.br/politica-de-privacidade.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>

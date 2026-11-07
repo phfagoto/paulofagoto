@@ -1003,6 +1003,246 @@ h1 {
 }
 
 /* ============================================================
+   PÁGINA SOBRE (sobremim.html)
+   ============================================================ */
+.about-wrapper {
+  flex: 1;
+  width: 100%;
+  padding: 40px 20px 60px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 48px 40px;
+  background: linear-gradient(135deg, #168A42 0%, #0F6B32 100%);
+  color: #ffffff;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.about-hero-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 16px;
+}
+
+.about-hero-tagline {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-body {
+  padding: 48px 40px;
+}
+
+.about-section + .about-section {
+  margin-top: 48px;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.about-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #168A42;
+  border-radius: 2px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #495057;
+  margin-bottom: 14px;
+}
+
+/* Linha do tempo */
+.about-timeline {
+  position: relative;
+  padding-left: 36px;
+  margin-top: 20px;
+}
+
+.about-timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, #168A42 0%, #e9ecef 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background: #168A42;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #168A42;
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #168A42;
+  background: #e4f2e9;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.timeline-description {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: #6c757d;
+}
+
+.timeline-description a {
+  color: #168A42;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.timeline-description a:hover {
+  text-decoration: underline;
+}
+
+/* Chips (especialidades e organizações) */
+.about-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  list-style: none;
+}
+
+.about-chips li {
+  padding: 8px 16px;
+  background: #e4f2e9;
+  color: #168A42;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.about-chips li a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about-chips li:hover {
+  background: #168A42;
+  color: #ffffff;
+}
+
+/* CTA final */
+.about-cta {
+  text-align: center;
+  padding: 32px 24px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  margin-top: 48px;
+}
+
+.about-cta p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.about-cta .btn-whatsapp {
+  font-size: 1rem;
+  padding: 14px 28px;
+}
+
+/* ============================================================
    RESPONSIVO
    ============================================================ */
 @media (max-width: 860px) {
@@ -1033,6 +1273,40 @@ h1 {
   }
   .btn-visit {
     width: 100%;
+  }
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 36px 24px;
+    gap: 20px;
+  }
+  .about-hero-photo {
+    margin: 0 auto;
+    width: 130px;
+    height: 130px;
+  }
+  .about-hero h1 {
+    font-size: 1.6rem;
+  }
+  .about-hero-role {
+    font-size: 0.95rem;
+  }
+  .about-body {
+    padding: 32px 24px;
+  }
+  .about-section h2 {
+    font-size: 1.25rem;
+  }
+  .about-timeline {
+    padding-left: 28px;
+  }
+  .about-timeline::before {
+    left: 8px;
+  }
+  .timeline-item::before {
+    left: -28px;
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -1151,6 +1425,27 @@ h1 {
     padding: 10px 20px;
     font-size: 0.85rem;
     width: 100%;
+  }
+  .about-wrapper {
+    padding: 24px 16px 40px;
+  }
+  .about-hero {
+    padding: 28px 20px;
+  }
+  .about-body {
+    padding: 24px 20px;
+  }
+  .about-section h2 {
+    font-size: 1.15rem;
+  }
+  .about-section p {
+    font-size: 0.95rem;
+  }
+  .timeline-title {
+    font-size: 0.95rem;
+  }
+  .timeline-description {
+    font-size: 0.88rem;
   }
 }
 
