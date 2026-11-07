@@ -70,4 +70,11 @@
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://www.paulofagoto.com.br/blog/computador-lento-sinais.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
