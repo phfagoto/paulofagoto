@@ -1665,6 +1665,155 @@ h1 {
   }
 }
 
+/* ============================================================
+   PÁGINA SERVIÇOS (servicos.html) — vitrine de serviços
+   ============================================================ */
+.services-hub-wrapper {
+  flex: 1;
+  width: 100%;
+  padding: 40px 20px 60px;
+}
+
+.services-hub-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services-hub-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.services-hub-subtitle {
+  text-align: center;
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.services-hub-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.services-hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: #168A42;
+}
+
+.services-hub-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background-color: #e4f2e9;
+  color: #168A42;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.services-hub-card:hover .services-hub-icon {
+  background-color: #168A42;
+  color: #ffffff;
+}
+
+.services-hub-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.services-hub-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #6c757d;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.services-hub-card-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #168A42;
+  transition: gap 0.2s ease;
+}
+
+.services-hub-card:hover .services-hub-card-link {
+  text-decoration: underline;
+}
+
+.services-hub-cta {
+  text-align: center;
+  padding: 40px 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e9ecef;
+}
+
+.services-hub-cta > p:first-child {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 700px) {
+  .services-hub-wrapper {
+    padding: 24px 16px 40px;
+  }
+  .services-hub-title {
+    font-size: 1.5rem;
+  }
+  .services-hub-subtitle {
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+  }
+  .services-hub-grid {
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .services-hub-card {
+    padding: 24px 20px;
+  }
+  .services-hub-card-title {
+    font-size: 1.15rem;
+  }
+  .services-hub-cta {
+    padding: 32px 20px;
+  }
+}
+
 @media (max-width: 380px) {
   .header-name {
     display: none;
