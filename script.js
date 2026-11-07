@@ -58,7 +58,16 @@ function updateScheduleStatus() {
     } else {
       statusBar.classList.remove('online');
       statusBar.classList.add('offline');
-      statusText.textContent = 'Atendimento Offline';
+
+      // Calcula o tempo até a próxima abertura
+      let remaining;
+      if (nowSeconds < openSeconds) {
+        remaining = openSeconds - nowSeconds;
+      } else {
+        remaining = (24 * 3600 - nowSeconds) + openSeconds;
+      }
+
+      statusText.innerHTML = 'Atendimento Offline - Volte daqui <strong>' + formatDuration(remaining) + '</strong>';
     }
   }
 
@@ -71,10 +80,8 @@ function updateScheduleStatus() {
     } else {
       let remaining;
       if (nowSeconds < openSeconds) {
-        // Antes de abrir hoje
         remaining = openSeconds - nowSeconds;
       } else {
-        // Depois de fechar hoje: abre amanhã às 06:00
         remaining = (24 * 3600 - nowSeconds) + openSeconds;
       }
       countdownText.innerHTML = 'Abre em <strong>' + formatDuration(remaining) + '</strong>';

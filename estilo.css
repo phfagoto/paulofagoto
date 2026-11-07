@@ -55,7 +55,11 @@ body {
 }
 
 .status-bar.offline {
-  background-color: #495057;
+  background-color: #dc3545;
+}
+
+.status-bar strong {
+  font-weight: 800;
 }
 
 .status-dot {
