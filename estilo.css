@@ -568,6 +568,15 @@ h1 {
   padding-top: 16px;
 }
 
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #e9ecef;
+}
+
 .author-info {
   display: flex;
   flex-direction: column;
