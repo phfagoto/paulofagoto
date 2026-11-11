@@ -151,4 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.appendChild(downloadsLink);
     }
   }
+
+  // ===== INSERE LINK "PLANILHAS" NO MENU AUTOMATICAMENTE =====
+  // Adiciona o link na navegação de todas as páginas que usam este script,
+  // sem precisar editar o HTML de cada uma.
+  if (nav && !nav.querySelector('a[href="/planilhas.html"]')) {
+    const planilhasLink = document.createElement('a');
+    planilhasLink.href = '/planilhas.html';
+    planilhasLink.className = 'nav-link';
+    planilhasLink.textContent = 'Planilhas';
+
+    // Marca como ativo se o usuário estiver na página de planilhas
+    if (window.location.pathname.endsWith('/planilhas.html')) {
+      planilhasLink.classList.add('active');
+      planilhasLink.setAttribute('aria-current', 'page');
+    }
+
+    // Insere antes do link do Blog (se existir); senão, no final
+    const blogLink = nav.querySelector('a[href="/blog/"]');
+    if (blogLink) {
+      nav.insertBefore(planilhasLink, blogLink);
+    } else {
+      nav.appendChild(planilhasLink);
+    }
+  }
 });
