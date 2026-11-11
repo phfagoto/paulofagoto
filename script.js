@@ -126,4 +126,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Status de Atendimento em Tempo Real =====
   updateScheduleStatus();
   setInterval(updateScheduleStatus, 1000);
+
+  // ===== INSERE LINK "DOWNLOADS" NO MENU AUTOMATICAMENTE =====
+  // Adiciona o link na navegação de todas as páginas que usam este script,
+  // sem precisar editar o HTML de cada uma.
+  const nav = document.querySelector('.header-nav');
+  if (nav && !nav.querySelector('a[href="/downloads.html"]')) {
+    const downloadsLink = document.createElement('a');
+    downloadsLink.href = '/downloads.html';
+    downloadsLink.className = 'nav-link';
+    downloadsLink.textContent = 'Downloads';
+
+    // Marca como ativo se o usuário estiver na página de downloads
+    if (window.location.pathname.endsWith('/downloads.html')) {
+      downloadsLink.classList.add('active');
+      downloadsLink.setAttribute('aria-current', 'page');
+    }
+
+    // Insere antes do link do Blog (se existir); senão, no final
+    const blogLink = nav.querySelector('a[href="/blog/"]');
+    if (blogLink) {
+      nav.insertBefore(downloadsLink, blogLink);
+    } else {
+      nav.appendChild(downloadsLink);
+    }
+  }
 });
